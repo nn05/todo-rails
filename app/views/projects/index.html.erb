@@ -1,0 +1,18 @@
+<% @project.order("id DESC").each do |project| %>
+  <div class="pi">
+    <div class="project_item d-flex justify-content-center m-auto bg-info">
+      <div class="col-8">
+        <%= project.name %>
+      </div>
+      <div class="col-1">
+        <%= link_to "edit", edit_project_path(project) %>
+      </div>
+      <div class="col-1">
+        <%= link_to "destroy", project_path(project), method: :delete  %>
+      </div>
+    </div>
+    <div class="add_task d-flex m-auto bg-secondary">
+    </div>
+  </div>
+<% end %>
+<%= link_to "add TODO list", new_project_path(),:class => 'btn btn-success add_project_btn' %>

@@ -1,0 +1,20 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.pi{
+  margin: 30px 0;
+}
+.project_item{
+  width: 50%;
+  height: 30px;
+  color: white;
+}
+.add_task{
+  width: 50%;
+}
+.add_project_btn{
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin: auto;
+}

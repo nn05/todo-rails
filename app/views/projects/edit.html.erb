@@ -1,0 +1,21 @@
+<h2> Edit post </h2>
+<%= form_for :project, url: project_path(@project), method: :patch do |f| %>
+  <% if @project.errors.any? %>
+    <% @priject.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger">
+        <%= msg %>
+      </div>
+    <% end %>
+  <% end %>
+<p>
+  Project Nae<br>
+  <%= f.text_field(:name, {:class => 'form-control'}) %>
+</p>
+<p>
+  Priority<br>
+  <%= f.text_field(:priority, {:class => 'form-control'}) %>
+</p>
+<p>
+  <%= f.submit({:class => 'btn btn-success'}) %>
+</p>
+<% end %>
